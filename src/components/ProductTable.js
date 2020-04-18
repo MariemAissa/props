@@ -9,11 +9,13 @@ const ProductTable =(products)=>{
         {
         products.map(item=>{
             return(
+                <table>
                     <tr>
                         <td>{item.category}</td>
                         <td>{item.price}</td>
                         <td>{item.name}</td>
                     </tr>
+                </table>
             );
         })
     }
