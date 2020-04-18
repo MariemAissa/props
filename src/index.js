@@ -10,10 +10,9 @@ const products = [
   {"category": "Clothes ", "price": 3400,"name":"Pull"}
 ]
 
-
 ReactDOM.render(
   <React.StrictMode>
-    <ProductTable></ProductTable>
+    <ProductTable products={products}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

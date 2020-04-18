@@ -2,19 +2,25 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 
-const ProductTable =(produtcs)=>{
-    console.log(produtcs)
+const ProductTable =(brand)=>{
+    console.log(brand.products)
     return(
         <>
-        <p>{produtcs.category}</p>
-        <p>{produtcs.price}</p>
-        <p>{produtcs.name}</p>
+        {
+        brand.map(item=>{
+            return(
+                <p category={brand.category} price={brand.price} name={brand.name}></p>
+             
+            );
+        })
+    }
+        
 
         </>
     );
 }
 
-ProductTable.PropTypes={
+ProductTable.propTypes={
     category:PropTypes.string,
     price:PropTypes.number,
     name:PropTypes.string
