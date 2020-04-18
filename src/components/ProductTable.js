@@ -2,21 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 
-const ProductTable =(brand)=>{
-    console.log(brand.products)
+const ProductTable =(products)=>{
+    console.log(products)
     return(
-        <>
+        <React.Fragment>
         {
-        brand.map(item=>{
+        products.map(item=>{
             return(
-                <p category={brand.category} price={brand.price} name={brand.name}></p>
-             
+                    <tr>
+                        <td>{item.category}</td>
+                        <td>{item.price}</td>
+                        <td>{item.name}</td>
+                    </tr>
             );
         })
     }
-        
-
-        </>
+        </React.Fragment>
     );
 }
 
