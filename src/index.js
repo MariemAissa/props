@@ -5,9 +5,9 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import ProductTable from './components/ProductTable';
 
-const products = [
-  {category: "Electronics ", price: 1400,name:"Appareil Photo"},
-  {category: "Clothes ", price: 3400,name:"Pull"}
+let products = [
+  {category: "Electronics", price: 1400,name:"Appareil Photo"},
+  {category: "Clothes", price: 3400,name:"Pull"}
 ]
 
 ReactDOM.render(

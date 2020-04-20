@@ -2,29 +2,28 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 
-const ProductTable =(products)=>{
-    console.log(products)
+const ProductTable =(props)=>{
+    console.log(props)
     return(
-        <React.Fragment>
-        {
-        products.map(item=>{
-            return(
-                <table>
-                    <tr>
-                        <td>{item.category}</td>
-                        <td>{item.price}</td>
-                        <td>{item.name}</td>
-                    </tr>
-                </table>
-            );
-        })
-    }
-        </React.Fragment>
+        <div >
+      <table>
+    
+        <tbody>
+          {props.products.map((item, i) => (
+            <tr key={i}>
+              <td>{item.name}</td>
+              <td>{item.category}</td>
+              <td>{item.price}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
     );
 }
 
 ProductTable.propTypes={
-    category:PropTypes.string,
+    category:PropTypes.oneOf(["Electronics","Clothes"]),
     price:PropTypes.number,
     name:PropTypes.string
 }
